@@ -4,7 +4,6 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { PiMapPinLight } from "react-icons/pi";
 import { useAuth } from "@/Context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import ButtonGroupUser from "./ButtonGroupUser/ButtonGroupUser";
 import { useSelect } from "@/Context/Context";
 
