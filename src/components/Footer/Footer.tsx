@@ -1,5 +1,7 @@
 import {useNavigate } from 'react-router-dom';
 import './Footer.css';
+import logo from "../../assets/logogid.png";
+
 
 const Footer = ({styleC = false}:any) => {
   const navigate = useNavigate();
@@ -11,7 +13,7 @@ const Footer = ({styleC = false}:any) => {
   return (
     <footer className={`footer__container ${styleC ? 'estiloFixed':''}`}>
       <div className='footer__container-logo'>
-        <img src="/src/assets/logogid.png" alt="" />
+        <img src={logo} alt="" />
         <p className='footer__texto-logo'>DreamHome</p>
       </div>
       <div className="footer__container-items">

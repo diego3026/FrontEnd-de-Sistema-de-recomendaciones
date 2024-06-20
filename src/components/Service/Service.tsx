@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Service.css';
 import AOS from 'aos'
+import imageService from "../../assets/PdescImage.png"
 
 const ServicesPage: React.FC = () => {
 
@@ -26,7 +27,7 @@ const ServicesPage: React.FC = () => {
       </div>
 
       <div className="Service_img-container">
-        <img src=".\src\assets\PdescImage.png" alt="Image" />
+        <img src={imageService} alt="Image" />
       </div>
     </div>
   );
