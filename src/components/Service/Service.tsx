@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './Service.css';
 import AOS from 'aos'
-import imageService from "../../assets/PdescImage.png"
+import imageService from "../../assets/PdescImage.png";
 
 const ServicesPage: React.FC = () => {
 
