@@ -5,6 +5,8 @@ import { faKey, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import './LoginStyle.css';
 import { useAuth } from '@/Context/AuthContext';
 import Swal from 'sweetalert2';
+import logo from "../../assets/logogid.png";
+
 
 const Inicio: React.FC = () => {
   const [username, setUsername] = useState<string>('');
@@ -43,7 +45,7 @@ const Inicio: React.FC = () => {
         <div className="panel_login">
           <div className="grid-el login-image">
             <div className="login-content-logo">
-              <img src="./src/assets/logogid.png" width={"180px"} alt="logo" />
+              <img src={logo} width={"180px"} alt="logo" />
             </div>
           </div>
           <div className="grid-el login-content">

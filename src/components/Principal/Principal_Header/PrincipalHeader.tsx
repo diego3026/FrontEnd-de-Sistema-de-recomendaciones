@@ -6,6 +6,7 @@ import { useAuth } from "@/Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import ButtonGroupUser from "./ButtonGroupUser/ButtonGroupUser";
 import { useSelect } from "@/Context/Context";
+import logo from "../../assets/logogid.png";
 
 type loggedType = {
   colorNameLogo?: boolean;
@@ -43,7 +44,7 @@ const PrincipalHeader:  React.FC<loggedType> = ({ colorNameLogo = false, colorUb
   return (
     <div className="header__container">
       <div className="header__imagen" onClick={navigatePrincipal}>
-        <img src="/src/assets/logogid.png" alt="" />
+        <img src={logo} alt="" />
         <div className={`header__imagen-text ${colorNameLogo ? 'text_blue' : ""}`}>DreamHome</div>
       </div>
       <div className="header__elements">
