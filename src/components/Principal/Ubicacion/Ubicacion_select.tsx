@@ -5,11 +5,11 @@ import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
 
 const Ubicacion: React.FC = () => {
-    const [isClearable, setIsClearable] = useState(true);
-    const [isSearchable, setIsSearchable] = useState(true);
-    const [isDisabled, setIsDisabled] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    const [isRtl, setIsRtl] = useState(false);
+    // const [isClearable, setIsClearable] = useState(true);
+    // const [isSearchable, setIsSearchable] = useState(true);
+    // const [isDisabled, setIsDisabled] = useState(false);
+    // const [isLoading, setIsLoading] = useState(false);
+    // const [isRtl, setIsRtl] = useState(false);
     const auth = useAuth()
     const apiService = new ApiService(auth.token);
     const {selectUbi, setSelectUbi} = useSelect()
@@ -82,11 +82,11 @@ const Ubicacion: React.FC = () => {
                 classNamePrefix="select"
                 value={selectUbi}
                 onChange={handleChange}
-                isDisabled={isDisabled}
-                isLoading={isLoading}
-                isClearable={isClearable}
-                isRtl={isRtl}
-                isSearchable={isSearchable}
+                isDisabled={false}
+                isLoading={false}
+                isClearable={true}
+                isRtl={false}
+                isSearchable={true}
                 placeholder="Tu ubicacion"
                 options={ciudadesData}
                 styles={customStyles}

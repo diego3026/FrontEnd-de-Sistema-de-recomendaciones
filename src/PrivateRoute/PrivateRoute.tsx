@@ -15,7 +15,6 @@ const PrivateRoute = () => {
         logoutUser();
       }
     };
-
     const accessToken = user?.accessToken;
     let tokenExp: Date | null = null;
 
@@ -26,6 +25,10 @@ const PrivateRoute = () => {
       }
     }
     
+    if (tokenExp && new Date() >= tokenExp) {
+      refresh();
+    }
+
   }, [user, refreshToken, logoutUser]);
 
   if (!isAuthenticated){

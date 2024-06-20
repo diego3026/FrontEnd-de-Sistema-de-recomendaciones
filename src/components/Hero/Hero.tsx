@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import "./Hero.styles.css";
 import { useAuth } from "@/Context/AuthContext";
 
-const Hero = ({logged=false}:any) => {
+const Hero = () => {
   const auth = useAuth();
 
   useEffect(() => {

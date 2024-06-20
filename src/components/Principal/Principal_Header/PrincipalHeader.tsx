@@ -18,7 +18,6 @@ const PrincipalHeader:  React.FC<loggedType> = ({ colorNameLogo = false, colorUb
   const auth = useAuth();
   const navigate = useNavigate();
   const {setFavoriteSave,selectedFavorites} = useSelect();
-  const [showOptions, setShowOptions] = useState(false);
   let user;
 
 

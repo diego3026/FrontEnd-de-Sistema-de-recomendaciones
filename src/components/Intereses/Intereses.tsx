@@ -12,7 +12,6 @@ interface Intereses {
 }
 const Interesespage: React.FC = () =>{
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
-  const [error, setError] = useState('');
   const navigate = useNavigate();
   const auth = useAuth();
   const apiService = new ApiService(auth.token);
@@ -35,17 +34,14 @@ const Interesespage: React.FC = () =>{
           interes: interest,
           usuario: auth.user.username,
         }); 
+        if(response){
+        }
       }
       navigate("/principal");
     } catch (error) {
       console.error('Error:', error);
-      setTimeout(() => {
-        setError('');
-      }, 3000);
     }
   };
-
-  console.log(selectedInterests)
 
   return (
     <div className="container__principal">

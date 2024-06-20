@@ -65,6 +65,7 @@ const Perfil = () => {
     const auth = useAuth();
 
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+        if(event){}
         setValue(newValue);
     };
 

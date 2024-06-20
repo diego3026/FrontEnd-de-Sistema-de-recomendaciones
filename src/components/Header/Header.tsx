@@ -33,25 +33,6 @@ const publicRoutes: RoutesType[] = [
   },
 ];
 
-const privateRoutes: RoutesType[] = [
-  {
-    label: "Inicio",
-    route: "/",
-  },
-  {
-    label: "Sobre nosotros",
-    route: "/sobre-nosotros",
-  },
-  {
-    label: "Servicios",
-    route: "/servicios",
-  },
-  {
-    label: "Contacto",
-    route: "/contactanos",
-  },
-];
-
 const Header: React.FC<loggedType> = ({ colorNameLogo = false, colorNameNav = false }: loggedType) => {
   const navigate = useNavigate();
   const location = useLocation();
