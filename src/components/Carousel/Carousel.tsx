@@ -17,7 +17,7 @@ function CarouselItems() {
                 </CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
-                <CImage className="d-block w-100 height" src='/src/assets/HousesTest/casa3.jpg'     alt="slide 3" />
+                <CImage className="d-block w-100 height" src='/src/assets/HousesTest/casa3.jpg' alt="slide 3" />
                 <CCarouselCaption className="d-none d-md-block">
                     {/* <h5>Third slide label</h5> */}
                     {/* <p>Some representative placeholder content for the first slide.</p> */}
