@@ -1,14 +1,10 @@
-/* eslint-disable no-case-declarations */
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Header from "@/components/Header/Header";
 import "./CreateAccount.styles.css";
-import ApiService from "@/apiCalls.service/apiCalls.service";
 import { useAuth } from '@/Context/AuthContext';
 import PrincipalHeader from '../Principal/Principal_Header/PrincipalHeader';
 
 const CreateAccount: React.FC = () => {
-  const navigate = useNavigate();
   const auth = useAuth();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [errors, setErrors] = useState({
@@ -35,7 +31,6 @@ const CreateAccount: React.FC = () => {
     repeatPassword: ""
   });
 
-  const apiService = new ApiService();
   const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     let error = "";

@@ -1,13 +1,12 @@
 import CarouselItems from '../Carousel/Carousel'
 import ApiService from '@/apiCalls.service/apiCalls.service';
 import { useAuth } from '@/Context/AuthContext';
-import { SetStateAction, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
 import './Caracteristicas.css';
 import Rating from './Rating/Rating';
 import CommentBox from './CommentBox/CommentBox';
-import { useSelect } from '@/Context/Context';
 import AlertExito from '../Alert/AlertExito';
 
 

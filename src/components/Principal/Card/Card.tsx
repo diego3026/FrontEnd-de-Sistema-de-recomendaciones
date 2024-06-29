@@ -5,18 +5,9 @@ import { MdFavorite } from "react-icons/md";
 import { useEffect, useState } from 'react';
 import { useSelect } from '@/Context/Context';
 import { CiSquareMinus } from "react-icons/ci";
-import ApiService from '@/apiCalls.service/apiCalls.service';
-import axios from 'axios';
-import { useAuth } from '@/Context/AuthContext';
 
-interface CardProps {
-  data: { idInmueble: number; url: string; precio: number; nombre: string; };
-  favorite: boolean;
-  token: string;
-  idUsuario: number;
-}
 
-function Card({ data, favorite, token, idUsuario }: any) {
+function Card({ data, favorite }: any) {
   const { idInmueble, precio, nombre, url } = data;
   const navigate = useNavigate();
   const [marcadoFavorite, setMarcadoFavorite] = useState(false);

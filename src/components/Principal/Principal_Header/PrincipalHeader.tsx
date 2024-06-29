@@ -4,10 +4,9 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { PiMapPinLight } from "react-icons/pi";
 import { useAuth } from "@/Context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import ButtonGroupUser from "./ButtonGroupUser/ButtonGroupUser";
 import { useSelect } from "@/Context/Context";
-import logo from "../../assets/logogid.png";
+import logo from "../../../assets/logogid.png";
 
 type loggedType = {
   colorNameLogo?: boolean;
@@ -19,7 +18,6 @@ const PrincipalHeader:  React.FC<loggedType> = ({ colorNameLogo = false, colorUb
   const auth = useAuth();
   const navigate = useNavigate();
   const {setFavoriteSave,selectedFavorites} = useSelect();
-  const [showOptions, setShowOptions] = useState(false);
   let user;
 
 

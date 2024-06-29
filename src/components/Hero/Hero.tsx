@@ -5,7 +5,7 @@ import "./Hero.styles.css";
 import { useAuth } from "@/Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-const Hero = ({ logged = false }: any) => {
+const Hero = () => {
   const auth = useAuth();
   const navigate = useNavigate();
 

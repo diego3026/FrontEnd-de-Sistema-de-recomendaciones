@@ -1,5 +1,4 @@
 import React, {createContext, useState, useContext, useEffect} from "react";
-import { useAuth } from "./AuthContext";
 
 type SelectedItem = {
     idInmueble: number;
@@ -9,12 +8,6 @@ type SelectedItem = {
     precio: number;
 };
   
-interface DataProps{
-    id: number;
-    precio: number;
-    url:string;
-    nombre: string;
-};
 
 interface ContextProps {
     selectUbi: null | any;

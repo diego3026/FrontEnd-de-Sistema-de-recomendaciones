@@ -1,18 +1,12 @@
 import { useSelect } from "@/Context/Context";
-import Spinner from '../Spinner/Spinner';
 import './Favorites.css'
 import Card from '../Principal/Card/Card';
 import { TbMoodSad } from "react-icons/tb";
 import { useEffect, useState } from "react";
-import { useAuth } from "@/Context/AuthContext";
-import ApiService from "@/apiCalls.service/apiCalls.service";
 
 const Favorites = () => {
-  const { isFavoriteSave, selectedFavorites, isFavoritoBorrado, setFavoritoBorrado } = useSelect();
-  const [isLoading, setIsLoading] = useState(true);
+  const { selectedFavorites } = useSelect();
   const [noFavorites, setNoFavorites] = useState(false)
-  const auth = useAuth();
-
 
   useEffect(() => {
     if (selectedFavorites.filter((card) => card.selected == true).length == 0) {

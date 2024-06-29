@@ -7,25 +7,29 @@ const PrivateRoute = () => {
   const { user, isAuthenticated, logoutUser, refreshToken } = useAuth();
 
   useEffect(() => {
-    const refresh = async () => {
-      try {
-        await refreshToken();
-      } catch (error) {
-        console.error(error);
-        logoutUser();
+    const checkTokenExpiration = async () => {
+      const accessToken = user?.accessToken;
+      let tokenExp: Date | null = null;
+
+      if (accessToken) {
+        const decodedToken = jwtDecode(accessToken);
+        if (decodedToken && typeof decodedToken.exp === 'number') {
+          tokenExp = new Date(decodedToken.exp * 1000);
+          const now = new Date();
+          // Check if token is expired in the next 5 minutes
+          if (tokenExp.getTime() - now.getTime() < 5 * 60 * 1000) {
+            try {
+              await refreshToken();
+            } catch (error) {
+              console.error(error);
+              logoutUser();
+            }
+          }
+        }
       }
     };
 
-    const accessToken = user?.accessToken;
-    let tokenExp: Date | null = null;
-
-    if (accessToken) {
-      const decodedToken = jwtDecode(accessToken);
-      if (decodedToken && typeof decodedToken.exp === 'number') {
-        tokenExp = new Date(decodedToken.exp * 1000);
-      }
-    }
-    
+    checkTokenExpiration();
   }, [user, refreshToken, logoutUser]);
 
   if (!isAuthenticated){

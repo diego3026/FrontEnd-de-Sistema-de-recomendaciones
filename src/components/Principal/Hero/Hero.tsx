@@ -13,7 +13,6 @@ interface Inmueble {
 
 function Hero() {
   const { inmuebles } = useSelect() as { inmuebles: Inmueble[] };
-  const [loading, setLoading] = useState(true);
   const [options, setOptions] = useState<Inmueble[]>([]);
   const [selectedOption, setSelectedOption] = useState<Inmueble | null>(null);
   const navigate = useNavigate();
@@ -21,10 +20,8 @@ function Hero() {
   useEffect(() => {
     if (inmuebles && inmuebles.length > 0) {
       setOptions(inmuebles);
-      setLoading(false);
     } else {
       setOptions([]);
-      setLoading(true);
     }
   }, [inmuebles]);
 
