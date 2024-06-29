@@ -2,15 +2,9 @@ import { useAuth } from '@/Context/AuthContext';
 import { useSelect } from '@/Context/Context';
 import ApiService from '@/apiCalls.service/apiCalls.service';
 import React, { useEffect, useState } from 'react';
-import { FaAlignJustify } from 'react-icons/fa6';
 import Select from 'react-select';
 
 const Ubicacion: React.FC = () => {
-    // const [isClearable, setIsClearable] = useState(true);
-    // const [isSearchable, setIsSearchable] = useState(true);
-    // const [isDisabled, setIsDisabled] = useState(false);
-    // const [isLoading, setIsLoading] = useState(false);
-    // const [isRtl, setIsRtl] = useState(false);
     const auth = useAuth()
     const apiService = new ApiService(auth.token);
     const {selectUbi, setSelectUbi} = useSelect()
