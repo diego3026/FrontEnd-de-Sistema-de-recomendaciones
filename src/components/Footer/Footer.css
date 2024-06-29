@@ -36,6 +36,7 @@
   color: var(--white);
   font-size: large;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .item > a{
