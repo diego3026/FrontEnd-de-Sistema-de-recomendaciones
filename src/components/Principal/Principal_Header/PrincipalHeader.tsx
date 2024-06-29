@@ -6,7 +6,7 @@ import { useAuth } from "@/Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import ButtonGroupUser from "./ButtonGroupUser/ButtonGroupUser";
 import { useSelect } from "@/Context/Context";
-import logo from "../../assets/logogid.png";
+import logo from "../../../assets/logogid.png";
 
 type loggedType = {
   colorNameLogo?: boolean;
