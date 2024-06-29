@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from '@mui/material';
 
 const AirbnbSlider = styled(Slider)(({ theme }) => ({
     color: 'var(--black)',
@@ -60,6 +61,7 @@ export default function CustomizedSlider({ max, min, onChange, selectedRangePric
         minValue: min,
         maxValue: max
     });
+    const matches = useMediaQuery('(max-width:630px)');
     
     function handleChangePrice(_: Event,newValue: number | number[]) {
         if (Array.isArray(newValue)){
@@ -86,7 +88,7 @@ export default function CustomizedSlider({ max, min, onChange, selectedRangePric
     }, [selectedRangePrice, onChange, min, max]);
     
     return (
-        <Box sx={{ width: 320 }}>
+        <Box sx={{ width: matches ? 200 : 320 }}>
             <Box sx={{ m: 3 }} />   
             <Typography gutterBottom>$ {priceRange.minValue.toLocaleString()} - $ {priceRange.maxValue.toLocaleString()}{priceRange.maxValue === max ? "+":""}</Typography>
             <AirbnbSlider

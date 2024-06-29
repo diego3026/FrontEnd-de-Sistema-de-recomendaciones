@@ -5,7 +5,7 @@ import Footer from "@/components/Footer/Footer";
 const Intereses: React.FC = () =>{
     return (
         <>
-            <Header/>
+            <Header colorNameLogo={true}/>
             <Interesespage/>
             <Footer styleC={true}/>
         </>

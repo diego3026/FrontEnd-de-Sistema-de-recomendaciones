@@ -1,0 +1,26 @@
+@media (max-width: 658px) {
+    .container__principal{
+        margin-top: 90px;
+        margin-bottom: 40px;
+    } 
+}
+
+@media (max-width: 520px) {
+    .container__principal{
+        height: auto;
+    }
+
+    .interest-card{
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 425px) {
+    .intereses__titulo{
+        font-size: larger;
+    }
+
+    .interest-card > p{
+        font-size: small;
+    }
+}

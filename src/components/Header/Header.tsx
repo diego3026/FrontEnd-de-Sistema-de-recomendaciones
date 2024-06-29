@@ -76,7 +76,7 @@ const Header: React.FC<loggedType> = ({ colorNameLogo = false, colorNameNav = fa
           Ingresar
         </li>
       </ul>
-      <div className="drawer">
+      <div className="drawer-header">
         <MobileDrawer/>
       </div>
     </header>

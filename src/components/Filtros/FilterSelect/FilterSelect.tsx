@@ -4,11 +4,13 @@ import Stack from '@mui/material/Stack';
 import { useAuth } from '@/Context/AuthContext';
 import ApiService from '@/apiCalls.service/apiCalls.service';
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from '@mui/material';
 
 
 export default function FilterSelect({option,save}:{option:string,save:any}) {
     const auth = useAuth();
     const apiService = new ApiService(auth.token);
+    const matches = useMediaQuery('(max-width:530px)');
     
     interface Caracteristica{
         id:number;
@@ -75,7 +77,7 @@ export default function FilterSelect({option,save}:{option:string,save:any}) {
     }
 
     return (
-        <Stack spacing={3} sx={{ width: 300 }}>
+        <Stack spacing={3} sx={{ width: 300 , display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <Autocomplete
             multiple
             id="tags-outlined"
@@ -83,6 +85,7 @@ export default function FilterSelect({option,save}:{option:string,save:any}) {
             getOptionLabel={(option) => formatText(option.nombre)}
             filterSelectedOptions
             onChange={handleOptions}
+            sx={{width: matches ? 230 : '100%'}}
             renderInput={(params) => (
             <TextField
                 {...params}

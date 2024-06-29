@@ -7,6 +7,7 @@ import MenuItem from './MenuItem/MenuItem';
 import FilterSelect from './FilterSelect/FilterSelect';
 import { FaXmark } from "react-icons/fa6";
 import { useSelect } from '@/Context/Context';
+import './responsive.css';
 
 const Filtros = ({ cerrar }: { cerrar: any }) => {
     const [selectedRangePrice, setSelectedRangePrice] = useState({ minValue: 100000, maxValue: 520000000 });

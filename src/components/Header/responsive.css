@@ -5,8 +5,7 @@
     .Header-navbar{
         display: none;
     }
-
-    .drawer{
+    .drawer-header{
         display: block;
     }
 }

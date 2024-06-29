@@ -4,6 +4,7 @@ import Header from "@/components/Header/Header";
 import "./CreateAccount.styles.css";
 import { useAuth } from '@/Context/AuthContext';
 import PrincipalHeader from '../Principal/Principal_Header/PrincipalHeader';
+import './responsive.css'
 
 const CreateAccount: React.FC = () => {
   const auth = useAuth();

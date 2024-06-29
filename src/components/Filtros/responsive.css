@@ -1,0 +1,60 @@
+@media (max-width: 830px) {
+    .caracteristicas{
+        gap:24px;
+    }
+
+    .interiores, .exterior, .sector, .zona-comun{
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .habitaciones, .banos, .parqueaderos{
+        flex-wrap: wrap;
+    }
+
+    .content__habitaciones, .content__banos, .content__parqueadero{
+        padding: 20px;
+    }
+
+    .alojamiento-card{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 730px) {
+    .card-alojamiento {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-alojamiento {
+        width: 75%;
+    }
+}
+
+@media (max-width: 500px) {
+    .filtros__container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 400px) {
+    .filtros__container {
+        width: 73%;
+    }
+
+    .habitaciones-titulo, .precio-titulo, .alojamiento-titulo, .banos-titulo, .parqueadero-titulo, .caracteristicas__titulo{
+        font-size: larger;
+    }
+
+    .caracteristicas__subtitulo{
+        font-size: large;
+    }
+
+    .card__texto{
+        font-size: medium;
+    }
+}

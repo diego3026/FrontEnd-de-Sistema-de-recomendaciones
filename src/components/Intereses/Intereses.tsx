@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import ApiService from '@/apiCalls.service/apiCalls.service';
 import { useAuth } from '@/Context/AuthContext';
-
+import './responsive.css';
 
 interface Intereses {
   nombre: string;
