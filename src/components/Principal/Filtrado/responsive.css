@@ -1,0 +1,15 @@
+@media (max-width: 425px) {
+    .recommended-residences{
+        padding: 0 40px;
+    }
+
+    .titles >h1, .titles>h2{
+        font-size: x-large;
+    }
+}
+
+@media (max-width: 375px) {
+    .recommended-residences{
+        padding: 0 20px;
+    }
+}

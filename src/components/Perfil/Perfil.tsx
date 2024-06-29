@@ -10,19 +10,23 @@ import InfoPerfil from './InfoPerfil/InfoPerfil';
 import InteresesPerfil from './InteresesPerfil/InteresesPerfil';
 import EditPerfil from './EditPerfil/EditPerfil';
 import { useAuth } from '@/Context/AuthContext';
+import './responsive.css';
+import { useMediaQuery } from '@mui/material';
 
 interface StyledTabsProps {
     children?: React.ReactNode;
     value: string;
+    orientation: any;
     onChange: (event: React.SyntheticEvent, newValue: string) => void;
 }
+
 
 const StyledTabs = styled((props: StyledTabsProps) => (
     <Tabs
         {...props}
         TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
     />
-))({
+)) ({
     '& .MuiTabs-indicator': {
         display: 'flex',
         justifyContent: 'center',
@@ -58,14 +62,24 @@ const StyledTab = styled((props: StyledTabProps) => (
         color: 'var(--white)',
         background: 'var(--darkOrange)',
     },
+    ["@media (max-width:735px)"]: {
+        margin: theme.spacing(1),
+        marginTop: '20px',
+    },
+    ["@media (max-width:557px)"]: {
+        margin: theme.spacing(0),
+        marginTop: '20px',
+        fontSize: theme.typography.pxToRem(13),
+    }
 }));
 
 const Perfil = () => {
     const [value, setValue] = useState("1");
     const auth = useAuth();
+    const isVertical = useMediaQuery('(max-width:523px)');
 
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-        if(event){}
+        if (event) { }
         setValue(newValue);
     };
 
@@ -76,7 +90,7 @@ const Perfil = () => {
                     <div className="avatar__info-nombres">
                         <h2 className="avatar__nombre">{auth.user.nombre} {auth.user.apellido}</h2>
                         <p className="avatar__usuario">@{auth.user.username}</p>
-                    </div> 
+                    </div>
                     <Avatar />
                 </div>
                 <div className="avatar__info">
@@ -88,19 +102,19 @@ const Perfil = () => {
             </div>
             <div className="info__perfil">
                 <TabContext value={value}>
-                    <StyledTabs value={value} onChange={handleChange} aria-label="styled tabs example">
+                    <StyledTabs orientation={isVertical ? 'vertical' : 'horizontal'} value={value} onChange={handleChange} aria-label="styled tabs example">
                         <StyledTab label="Perfil" value="1" />
                         <StyledTab label="Intereses" value="2" />
                         <StyledTab label="Editar Perfil" value="3" />
                     </StyledTabs>
                     <TabPanel value="1">
-                        <InfoPerfil/>
+                        <InfoPerfil />
                     </TabPanel>
                     <TabPanel value="2">
-                        <InteresesPerfil/>
-                    </TabPanel> 
-                    <TabPanel sx={{overflowY:'auto',height: '80%'}} value="3">
-                        <EditPerfil/>
+                        <InteresesPerfil />
+                    </TabPanel>
+                    <TabPanel sx={{ overflowY: 'auto', height: '80%' }} value="3">
+                        <EditPerfil />
                     </TabPanel>
                 </TabContext>
             </div>

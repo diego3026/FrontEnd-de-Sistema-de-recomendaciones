@@ -1,7 +1,7 @@
 import {useNavigate } from 'react-router-dom';
 import './Footer.css';
 import logo from "../../assets/logogid.png";
-
+import './footer-responsive.css'
 
 const Footer = ({styleC = false}:any) => {
   const navigate = useNavigate();

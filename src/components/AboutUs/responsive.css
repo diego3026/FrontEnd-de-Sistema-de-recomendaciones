@@ -1,0 +1,35 @@
+@media (max-width: 975px){
+    .about-container__info{
+        padding: 0;
+    }
+
+    .about-info__titulo{
+        font-size: 220%;
+    }
+
+    .about-info__subtitulo{
+        font-size: 150%;
+    }
+    
+    .about-info__parrafo{
+        font-size: medium;
+    }
+}
+
+@media (max-width: 534px){
+    .about-info__titulo{
+        font-size: 150%;
+    }
+
+    .about-info__subtitulo{
+        font-size: 100%;
+    }
+    
+    .about-info__parrafo{
+        font-size: 80%;
+    }
+
+    .about-info__resaltado{
+        font-size: 70%;
+    }
+}

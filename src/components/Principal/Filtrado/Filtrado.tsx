@@ -5,6 +5,7 @@ import { faSliders } from '@fortawesome/free-solid-svg-icons';
 import { CiCircleChevRight } from "react-icons/ci";
 import Filtros from "@/components/Filtros/Filtros";
 import { usePagination } from "@/Context/PaginacionContext";
+import "./responsive.css";
 
 const Filtrado = () => {
   const [showFiltros, setShowFiltros] = useState(false)

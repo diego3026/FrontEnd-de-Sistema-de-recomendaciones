@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import ButtonGroupUser from "./ButtonGroupUser/ButtonGroupUser";
 import { useSelect } from "@/Context/Context";
 import logo from "../../../assets/logogid.png";
+import MobileDrawerPrincipal from '@/components/MobileDrawer/MobileDrawerPrincipal';
+import './responsive.css';
 
 type loggedType = {
   colorNameLogo?: boolean;
@@ -62,6 +64,9 @@ const PrincipalHeader:  React.FC<loggedType> = ({ colorNameLogo = false, colorUb
             <div className="user">{auth?.isAuthenticated ? (capitalizeFirstLetter(user?.nombre)) : ("Mi cuenta")}</div>
           </div>
         </div>
+      </div>
+      <div className="drawer">
+        <MobileDrawerPrincipal/>
       </div>
     </div>
   );

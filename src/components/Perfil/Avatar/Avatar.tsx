@@ -33,6 +33,6 @@ export default function BackgroundLetterAvatars() {
     const auth = useAuth();
 
     return (
-        <Avatar {...stringAvatar(auth.user.nombre +' '+ auth.user.apellido)} sx={{ width: '42%', height: '52%' }}/>
+        <Avatar {...stringAvatar(auth.user.nombre +' '+ auth.user.apellido)} sx={{ width: '100px', height: '100px' }}/>
     );
 }

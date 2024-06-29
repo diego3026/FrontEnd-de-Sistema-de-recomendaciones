@@ -1,6 +1,7 @@
 import "./ContactUs.styles.css";
-import '../Alert/AlertExito'
+import '../Alert/AlertExito';
 import AlertExito from "../Alert/AlertExito";
+import './responsive.css';
 
 const Contact: React.FC = () =>{
 

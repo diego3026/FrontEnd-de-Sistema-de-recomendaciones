@@ -1,0 +1,19 @@
+@media (max-width:1172px){
+    .ContactUs-container__image{
+        display: none;
+    }
+
+    .header-selected{
+        color: var(--darkOrange);
+    }
+
+    .ContactUs-container{
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 834px){
+    .ContactUs{
+        height: 90vh;
+    }
+}

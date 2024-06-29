@@ -6,7 +6,7 @@ import './LoginStyle.css';
 import { useAuth } from '@/Context/AuthContext';
 import Swal from 'sweetalert2';
 import logo from "../../assets/logogid.png";
-
+import './responsive.css'
 
 const Inicio: React.FC = () => {
   const [username, setUsername] = useState<string>('');

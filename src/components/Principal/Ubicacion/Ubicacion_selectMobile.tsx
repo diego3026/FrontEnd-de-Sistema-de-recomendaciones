@@ -2,6 +2,7 @@ import { useAuth } from '@/Context/AuthContext';
 import { useSelect } from '@/Context/Context';
 import ApiService from '@/apiCalls.service/apiCalls.service';
 import React, { useEffect, useState } from 'react';
+import { FaAlignJustify } from 'react-icons/fa6';
 import Select from 'react-select';
 
 const Ubicacion: React.FC = () => {
@@ -56,8 +57,7 @@ const Ubicacion: React.FC = () => {
             flexWrap: 'nowrap',
             width: 'max-content',
             textAlign: 'center',
-            borderColor: 'hsl(0deg 78.56% 55.56%);',
-            border: 'None',
+            borderColor: 'black',
         }),
         singleValue: (provided: any) => ({
             ...provided,

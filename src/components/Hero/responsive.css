@@ -1,0 +1,9 @@
+@media (max-width: 910px) {
+    .Hero-container__text{
+        font-size: x-large;
+    }
+
+    .Hero-container__title{
+        font-size: 60%;
+    }
+}

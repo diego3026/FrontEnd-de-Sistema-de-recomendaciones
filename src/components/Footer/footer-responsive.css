@@ -1,0 +1,17 @@
+@media (max-width: 834px) {
+    .footer__container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .estiloFixed{
+        position: relative;
+    }
+}
+
+@media (max-width: 534px) {
+    .item, .footer__text{
+        font-size: medium;
+    }
+
+}

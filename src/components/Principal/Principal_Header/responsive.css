@@ -1,0 +1,13 @@
+@media (max-width: 670px) {
+    .header__container{
+        align-items: center;
+    }
+    
+    .header__elements{
+        display: none;
+    }
+
+    .drawer{
+        display: block;
+    }
+}

@@ -1,0 +1,5 @@
+@media (max-width: 670px) {
+    .hero__form{
+        width: 50%;
+    }
+}

@@ -1,10 +1,11 @@
-import "./HeroStyles.css"
+import "./HeroStyles.css";
 import { CiSearch } from "react-icons/ci";
 import Autocomplete from '@mui/joy/Autocomplete';
 import { useSelect } from "@/Context/Context";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
+import './responsive.css';
 
 interface Inmueble {
   id: number;

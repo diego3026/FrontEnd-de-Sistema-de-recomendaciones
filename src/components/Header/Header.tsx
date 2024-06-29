@@ -2,6 +2,8 @@ import * as React from "react";
 import logo from "../../assets/logogid.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Header.styles.css";
+import MobileDrawer from "@/components/MobileDrawer/MobileDrawer";
+import "./responsive.css";
 
 type loggedType = {
   logged?: boolean;
@@ -74,6 +76,9 @@ const Header: React.FC<loggedType> = ({ colorNameLogo = false, colorNameNav = fa
           Ingresar
         </li>
       </ul>
+      <div className="drawer">
+        <MobileDrawer/>
+      </div>
     </header>
   );
 };

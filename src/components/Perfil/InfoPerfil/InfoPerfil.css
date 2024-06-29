@@ -5,6 +5,7 @@
     gap: 25%;
     padding-top: 20px;
     padding-left: 30px;
+    overflow-y: auto;
 }
 
 .info{
