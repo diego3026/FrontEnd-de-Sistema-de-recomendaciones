@@ -1,0 +1,48 @@
+{
+    "trailingSlash": "auto",
+    "routes": [
+        {
+            "route": "/perfil*"
+        },
+        {
+            "route": "/inicio-sesion"
+        },
+        {
+            "route": "/sobre-nosotros"
+        },
+        {
+            "route": "/servicios"
+        },
+        {
+            "route": "/crear-cuenta"
+        },
+        {
+            "route": "/favoritos"
+        },
+        {
+            "route": "/principal"
+        },
+        {
+            "route": "/caracteristica/:id"
+        }
+    ],
+    "navigationFallback": {
+        "rewrite": "index.html",
+        "exclude": [
+            "/images/*.{png,jpg,gif}",
+            "/css/*"
+        ]
+    },
+    "responseOverrides": {
+        "401": {
+            "redirect": "/login",
+            "statusCode": 302
+        }
+    },
+    "globalHeaders": {
+        "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+    },
+    "mimeTypes": {
+        ".json": "text/json"
+    }
+}
