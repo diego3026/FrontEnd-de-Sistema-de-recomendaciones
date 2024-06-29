@@ -1,6 +1,13 @@
 import "./ContactUs.styles.css";
+import '../Alert/AlertExito'
+import AlertExito from "../Alert/AlertExito";
 
 const Contact: React.FC = () =>{
+
+  const handleMensaje = () => {
+    AlertExito({message: "Su mensaje se ha enviado"});
+  }
+
   return (
     <div className="ContactUs">
       <div className="ContactUs-container">
@@ -13,7 +20,7 @@ const Contact: React.FC = () =>{
             <input type="text" placeholder="Nombre completo" />
             <input type="text" placeholder="Numero de celular" />
             <textarea placeholder="Mensaje"></textarea>
-            <button>Enviar Mensaje</button>
+            <button onClick={handleMensaje}>Enviar Mensaje</button>
           </div>
         </div>
         <div className="ContactUs-container__image">

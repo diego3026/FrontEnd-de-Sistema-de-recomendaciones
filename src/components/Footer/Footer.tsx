@@ -10,6 +10,10 @@ const Footer = ({styleC = false}:any) => {
     navigate("/contactanos");
   };
 
+  const handleNavigate = (url:string) => {
+    navigate(url);
+  }
+
   return (
     <footer className={`footer__container ${styleC ? 'estiloFixed':''}`}>
       <div className='footer__container-logo'>
@@ -17,9 +21,9 @@ const Footer = ({styleC = false}:any) => {
         <p className='footer__texto-logo'>DreamHome</p>
       </div>
       <div className="footer__container-items">
-        <a className="item" href="/ ">Inicio</a>
-        <a className="item" href="/sobre-nosotros">Sobre Nosotros</a>
-        <a className="item" href="/servicios">Servicios</a>
+        <a className="item" onClick={() => handleNavigate("/")}>Inicio</a>
+        <a className="item" onClick={() => handleNavigate("/sobre-nosotros")}>Sobre Nosotros</a>
+        <a className="item" onClick={() => handleNavigate("/servicios")}>Servicios</a>
       </div>
       <div className="footer__container-button">
         <h3 className='footer__text'>Vamos hacerlo! -</h3>
